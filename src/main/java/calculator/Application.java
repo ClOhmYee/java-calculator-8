@@ -14,6 +14,12 @@ public class Application {
         System.out.println("덧셈할 문자열을 입력해 주세요.");
         String iStr = Console.readLine();
 
+        // 빈 문자열을 받은 경우에는 바로 결과 출력하고 return하기
+        if (iStr.isEmpty()) {
+            System.out.println("0\n");
+            return;
+        }
+
         // 기본 구분자를 생성
         separator = new ArrayList<>(Arrays.asList(",", ":"));
 
