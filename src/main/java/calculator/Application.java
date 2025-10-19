@@ -15,8 +15,8 @@ public class Application {
         String iStr = Console.readLine();
 
         // 빈 문자열을 받은 경우에는 바로 결과 출력하고 return하기
-        if (iStr.isEmpty()) {
-            System.out.println("0\n");
+        if (iStr == null || iStr.isEmpty()) {
+            System.out.println("결과 : 0\n");
             return;
         }
 
@@ -30,9 +30,6 @@ public class Application {
         String sepRegex = String.join("|", separator);
         String part = iStr.substring(start);
         String[] numbers = part.split(sepRegex);
-        for (String s : numbers) {
-            System.out.println(s);
-        }
         
         // 숫자들의 합 계산
         int sum = 0;
